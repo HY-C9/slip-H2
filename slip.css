@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
 /* SukhumvitSet */
 @font-face {
@@ -470,380 +471,120 @@
     src: url('fonts/kurious-Bold.woff') format('woff');
 }
 
-/* kurious*/
-@font-face {
-    font-family: 'kuriousRegular';
-    src: url('fonts/kurious-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: 'kuriousMedium';
-    src: url('fonts/kurious-medium.woff') format('woff');
-}
-@font-face {
-    font-family: 'kuriousSemiBold';
-    src: url('fonts/kurious-semibold.woff') format('woff');
-}
-@font-face {
-    font-family: 'kuriousBold';
-    src: url('fonts/kurious-Bold.woff') format('woff');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'KanitMedium', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110vh;
-    margin: 0;
-    background: linear-gradient(135deg, #4a5a6a, #3a4d5b, #2f3e4c, #263340);
-    overflow: auto;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 30px 20px;
 }
 
 
 .container {
     display: flex;
-    gap: 20px;
-    transform: scale(0.67);
-    transform-origin: center;
-    position: relative;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.display-container, .form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.0);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-    border-radius: 10px;
-    min-width: 300px;
-    max-width: 2200px;
-    min-height: 400px;
-    max-height: 1500px;
-    resize: both;
-    overflow: auto;
-}
 
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 380px;
+.form-container, .display-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06); 
+    width: 100%;
+    max-width: 500px;
 }
 
 h1 {
-    font-family: 'KanitRegular', Arial, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #111;
+    text-align: center;
 }
-
-h2 {
-    font-family: 'KanitRegular', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: #0099ff;
-    margin-bottom: 10px;
-}
-
 
 label {
-    font-family: 'KanitRegular', Arial, sans-serif;
-    margin-top: 15px;
-    font-size: 23px;
-    font-weight: normal;
-    color: #D1D1D1;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #666;
 }
 
-input, select {
-    margin-top: 7px;
-    padding: 10px;
-    font-size: 22px;
-    font-family: 'KanitRegular', Arial, sans-serif;
-    border: 2px solid #5d6970;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.0); /* This makes the background transparent */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    color: #fff; /* Change the text color to something that contrasts with the background */
+
+input[type="text"],
+input[type="datetime-local"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #333;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
 }
 
-input:focus, select:focus {
-    border-color: #ffffff;
-    border-width: 2px; /* เพิ่มความหนา */
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+    border-color: #00a950;
+    box-shadow: 0 0 0 4px rgba(0, 169, 80, 0.1);
+    background-color: #ffffff;
 }
 
-
-select option {
-    font-size: 18px;
-    background-color: #263340; /* ปรับสีพื้นหลังของตัวเลือก */
-    color: #fff; /* สีตัวอักษรของตัวเลือก */
+#number2 {
+    margin-bottom: 20px;
 }
-
-select option:hover {
-    background-color: #0066cc; /* เปลี่ยนสีของตัวเลือกเมื่อ hover */
-    color: #fff; /* สีของตัวอักษรในขณะ hover */
-}
-
-select option:checked {
-    background-color: #004b99; /* เปลี่ยนสีพื้นหลังเมื่อมีการเลือก */
-    color: #fff; /* สีตัวอักษรเมื่อมีการเลือก */
-}
-
 
 button {
-    font-family: 'KanitRegular', Arial, sans-serif;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #0066cc;
-    color: #fff;
+    width: 100%;
+    padding: 14px;
+    background-color: #00a950;
+    color: white;
     border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-input:hover, select:hover {
-    background: rgba(255, 255, 255, 0.1); /* เพิ่มความขาวอ่อนเมื่อ hover */
-    color: #ffffff; /* สีข้อความเปลี่ยนเป็นขาว */
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #4a5a6a; /* เพิ่มสีขาวอ่อนเมื่อ hover */
-    color: #ffffff;
+    background-color: #008f43;
 }
 
-select option:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* เพิ่มความขาวอ่อนเมื่อ hover */
-    color: #ffffff;
+button:active {
+    transform: scale(0.98);
 }
 
-
-.display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 20px;
 }
 
-#canvas {
-    border: none;
-}
-
-.qrcode-drop-area {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 20px;
-    font-family: 'KanitRegular', Arial, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    text-align: center;
-    color: #999;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Battery Slider Styles */
-#battery {
-    appearance: none;
-    width: 93%;
-    height: 8px;
-    background: #4a5a6a; /* Matches the background color scheme */
-    border-radius: 5px;
-    outline: none;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-}
-
-#battery::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8px;
-    cursor: pointer;
-    background: #4a5a6a;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-#battery:hover::-webkit-slider-runnable-track {
-    background: #5d6970; /* Lighter on hover for track */
-}
-
-#battery::-webkit-slider-thumb {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #ffffff; /* White thumb for contrast */
-    box-shadow: 0px 0px 8px rgba(0, 102, 204, 0.7); /* Adds a glowing effect */
-    cursor: pointer;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    top: -4px; /* Center the thumb */
-}
-
-#battery:active::-webkit-slider-thumb {
-    background: #99ccff; /* Lighter blue on active */
-    box-shadow: 0px 0px 12px rgba(0, 102, 204, 1); /* Stronger glow when dragging */
-}
-
-/* For Firefox */
-#battery::-moz-range-track {
-    width: 100%;
-    height: 8px;
-    cursor: pointer;
-    background: #4a5a6a;
-    border-radius: 5px;
-}
-
-#battery::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #ffffff;
-    box-shadow: 0px 0px 8px rgba(0, 102, 204, 0.7);
-    cursor: pointer;
-}
-
-#battery:active::-moz-range-thumb {
-    background: #99ccff;
-    box-shadow: 0px 0px 12px rgba(0, 102, 204, 1);
-}
-
-/* Power Saving Mode Button */
-#powerSavingMode {
-    margin-top: 10px;
-    background-color: #ff9900;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#powerSavingMode:hover {
-    background-color: #cc6600;
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-
-/* ปรับแต่ง Scrollbar ให้เข้ากับธีม */
-::-webkit-scrollbar {
-    width: 10px; /* ความกว้างของ scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: #2f3e4c; /* สี track เข้ากับพื้นหลัง */
-    border-radius: 10px; /* เพิ่มความโค้งมนให้ scrollbar track */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #3a4d5b; /* สี scrollbar เน้นให้เข้ากับองค์ประกอบ */
-    border-radius: 10px; /* เพิ่มความโค้งมนให้ scrollbar */
-    border: 2px solid #2f3e4c; /* ขอบรอบ scrollbar เข้ากับ track */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #4a5a6a; /* เปลี่ยนสีเมื่อ hover เข้ากับพื้นหลัง */
-}
-
-
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* เพิ่มความขาวอ่อนเมื่อ hover */
-}
-
-
-
-
-/* Add this to your existing CSS */
-
-#image-checkboxes-left, #image-checkboxes-right {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-#image-checkboxes-left label, #image-checkboxes-right label {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-#image-checkboxes-left input[type="checkbox"], #image-checkboxes-right input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-
-/* ติ๊กหลายๆอัน*/
-/* Title Selection Buttons */
-#title-selection, #gender-selection , #status-selection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.title-btn {
-    font-family: 'KanitRegular', Arial, sans-serif;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #3a4d5b;
-    color: #ffffff;
-    border: 2px solid #5d6970;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-}
-
-.title-btn:hover {
-    background-color: #4a5a6a;
-    transform: translateY(-2px);
-}
-
-.title-btn.active {
-    background-color: #0066cc;
-    border-color: #004b99;
-    transform: none;
-}
-
-.title-btn.active:hover {
-    background-color: #005bb5;
-}
-
-input[list] {
-    margin-top: 7px;
-    padding: 10px;
-    font-size: 22px;
-    font-family: 'KanitRegular', Arial, sans-serif;
-    border: 2px solid #5d6970;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.0);
-    color: #fff;
-}
-
-textarea {
-    margin-top: 7px;
-    padding: 10px;
-    font-size: 22px;
-    font-family: 'KanitRegular', Arial, sans-serif;
-    border: 2px solid #5d6970;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.0);
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    color: #fff;
-    resize: vertical;
-}
-textarea:focus {
-    border-color: #ffffff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
-}
-textarea:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
